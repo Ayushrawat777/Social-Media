@@ -16,7 +16,7 @@ const Detail = () => {
   return (
     <div className="detail-container">
       <div className="single-detail">
-        <Link to={`/React-App-Social-Media`}>
+        <Link to={`/Social-Media`}>
           <img src={img} alt="Next" />
         </Link>
 
@@ -54,7 +54,7 @@ const Detail = () => {
           {showDetail ? (
             <p>{post.body}</p> // Shows post details
           ) : (
-            <p>Post Was Posted By {post.userId}</p> // Shows user info
+            <p>Post Was Posted By {post.id}</p> // Shows user info
           )}
         </div>
       </div>
@@ -71,11 +71,11 @@ const Detail = () => {
             <div className="details">
               <p>
                 {post.body.substring(0, 100)}...
-                <Link to={`/React-App-Social-Media/item/${post.id}`} className="read-more">
+                <Link to={`/Social-Media/item/${post.id}`} className="read-more">
                   Read more
                 </Link>
               </p>
-              <Link to={`/React-App-Social-Media/item/${post.id}`}>
+              <Link to={`/Social-Media/item/${post.id}`}>
                 <button className="next-button">
                   <img src={img} alt="Next" />
                 </button>{" "}
